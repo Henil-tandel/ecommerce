@@ -84,31 +84,8 @@ yarn install
 
 ### Step 3: Setup Environment Variables
 
-Create a `.env` file in the root directory and configure the following variables:
+Create a `.env` file in the root directory.
 
-```env
-# Server Configuration
-PORT=5000
-NODE_ENV=development
-
-# Database Configuration
-DATABASE_HOST=localhost
-DATABASE_PORT=3306
-DATABASE_USER_NAME=root
-DATABASE_PASSWORD=your_password
-DATABASE=ecommerce
-
-# Authentication
-JWT_SECRET=your_jwt_secret_key_here
-
-# Cloudinary (for image management)
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-
-# Debugging
-DEBUG=true
-```
 
 ### Step 4: Setup MySQL Database
 
@@ -155,26 +132,6 @@ npm run dev
 ```
 
 The server will start on `http://localhost:5000` (or your configured PORT)
-
-### Build for Production
-
-Compile TypeScript to JavaScript:
-
-```bash
-npm run build
-```
-
-This generates compiled files in the `dist/` directory.
-
-### Production Mode
-
-Start the built application:
-
-```bash
-npm start
-```
-
----
 
 ## API Features
 
@@ -235,10 +192,8 @@ Run `allquery.sql` to set up the complete schema.
 
 ### Real-time Updates
 WebSocket integration via Socket.io provides real-time notifications for:
-- Order status updates
 - Product price changes
 - Inventory updates
-- Chat/messaging (if enabled)
 
 ### Scheduled Jobs
 - **Price Updater**: Automatically updates product prices at scheduled intervals using node-cron
