@@ -1,0 +1,86 @@
+2025-12-04 16:09:24:924 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:09:24:924 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:09:24:924 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:09:24:924 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:09:24:924 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:09:28:928 [35mhttp[39m: [35mGET /api/v1/product?name=o 200 2787 - 52.876 ms[39m
+2025-12-04 16:10:59:1059 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:10:59:1059 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:10:59:1059 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:10:59:1059 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:10:59:1059 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:15:44:1544 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:15:44:1544 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:15:44:1544 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:15:44:1544 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:15:44:1544 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:16:01:161 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:16:01:161 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:16:01:161 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:16:01:161 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:16:01:161 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:16:19:1619 [35mhttp[39m: [35mGET /api/v1/product?search=o 200 2787 - 112.468 ms[39m
+2025-12-04 16:17:04:174 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:17:04:174 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:17:04:174 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:17:04:174 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:17:04:174 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:17:13:1713 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:17:13:1713 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:17:13:1713 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:17:13:1713 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:17:13:1713 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:17:16:1716 [35mhttp[39m: [35mGET /api/v1/product?search=o 200 2787 - 43.574 ms[39m
+2025-12-04 16:17:22:1722 [35mhttp[39m: [35mGET /api/v1/product?search=g 200 2787 - 20.503 ms[39m
+2025-12-04 16:17:42:1742 [35mhttp[39m: [35mGET /api/v1/admin/product?search=o 200 2787 - 27.364 ms[39m
+2025-12-04 16:17:48:1748 [35mhttp[39m: [35mGET /api/v1/admin/product?search=g 200 2118 - 20.864 ms[39m
+2025-12-04 16:17:57:1757 [35mhttp[39m: [35mGET /api/v1/admin/product?search=a 200 1453 - 18.105 ms[39m
+2025-12-04 16:18:30:1830 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:18:30:1830 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:18:31:1831 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:18:31:1831 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:18:31:1831 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:19:21:1921 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:19:21:1921 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:19:21:1921 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:19:21:1921 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:19:21:1921 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:19:25:1925 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:19:25:1925 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:19:25:1925 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:19:25:1925 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:19:25:1925 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:19:33:1933 [35mhttp[39m: [35mGET /api/v1/admin/product?search=r 200 140 - 35.624 ms[39m
+2025-12-04 16:19:36:1936 [35mhttp[39m: [35mGET /api/v1/admin/product?search=g 200 772 - 42.851 ms[39m
+2025-12-04 16:19:41:1941 [35mhttp[39m: [35mGET /api/v1/admin/product?search=o 200 808 - 18.075 ms[39m
+2025-12-04 16:19:44:1944 [35mhttp[39m: [35mGET /api/v1/admin/product?search=s 200 820 - 20.761 ms[39m
+2025-12-04 16:20:25:2025 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:20:25:2025 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:20:26:2026 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:20:26:2026 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:20:26:2026 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:20:38:2038 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:20:38:2038 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:20:38:2038 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:20:38:2038 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:20:38:2038 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:21:04:214 [31merror[39m: [31moriginalPrice is not allowed[39m
+2025-12-04 16:21:04:214 [35mhttp[39m: [35mPOST /api/v1/admin/product 422 59 - 28.233 ms[39m
+2025-12-04 16:21:21:2121 [35mhttp[39m: [35mPOST /api/v1/admin/product 200 641 - 3204.288 ms[39m
+2025-12-04 16:21:29:2129 [35mhttp[39m: [35mGET /api/v1/product?search=g 200 3422 - 40.558 ms[39m
+2025-12-04 16:21:48:2148 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 16:21:48:2148 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 16:21:48:2148 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 16:21:48:2148 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 16:21:48:2148 [32minfo[39m: [32mServer is running on port 5000[39m
+2025-12-04 16:21:52:2152 [35mhttp[39m: [35mGET /api/v1/product?search=g 200 3422 - 72.776 ms[39m
+2025-12-04 16:22:14:2214 [35mhttp[39m: [35mGET /api/v1/admin/product?search=s 200 820 - 27.055 ms[39m
+2025-12-04 16:22:18:2218 [35mhttp[39m: [35mGET /api/v1/admin/product?search=g 200 1407 - 17.730 ms[39m
+2025-12-04 16:22:26:2226 [35mhttp[39m: [35mGET /api/v1/admin/product?search=v 200 804 - 23.715 ms[39m
+2025-12-04 16:26:22:2622 [31merror[39m: 
+2025-12-04 16:26:22:2622 [35mhttp[39m: [35mGET /api/v1/admin/product?search=v 401 31 - 1.687 ms[39m
+2025-12-04 17:06:08:68 [32minfo[39m: [32mDatabase ecommerce created or already exists.[39m
+2025-12-04 17:06:08:68 [32minfo[39m: [32mConnection established to the "Ecommerce" database.[39m
+2025-12-04 17:06:08:68 [32minfo[39m: [32mAll Sequelize models are synced successfully.[39m
+2025-12-04 17:06:08:68 [32minfo[39m: [32mApp data initialized[39m
+2025-12-04 17:07:21:721 [32minfo[39m: [32mApp data initialized[39m

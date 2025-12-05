@@ -1,0 +1,365 @@
+# E-Commerce Backend API
+
+A comprehensive Express.js-based e-commerce backend API built with TypeScript, featuring role-based authentication, product management, shopping cart functionality, and real-time WebSocket support.
+
+## Project Overview
+
+This is a full-featured e-commerce backend API that provides:
+
+- **User Management**: Registration, authentication, and profile management
+- **Product Management**: CRUD operations for products, variants, and combos
+- **Shopping Features**: Cart management, wishlist, and product reviews
+- **Admin Panel**: Administrative controls for products, banners, blogs, and categories
+- **File Management**: Image uploads to Cloudinary
+- **Real-time Updates**: WebSocket integration for live notifications
+- **Security**: JWT authentication, password hashing, and role-based authorization
+- **Data Export**: CSV and Excel export functionality
+
+---
+
+## Tech Stack
+
+### Backend Framework
+- **Express.js** - Web framework
+- **TypeScript** - Type-safe JavaScript
+- **Node.js** - Runtime environment
+
+### Database & ORM
+- **MySQL 2** - Relational database
+- **Sequelize** - ORM for database operations
+
+### Authentication & Security
+- **JWT (jsonwebtoken)** - Token-based authentication
+- **bcryptjs** - Password hashing and encryption
+
+### Real-time Communication
+- **Socket.io** - WebSocket support for real-time features
+
+### File & Image Management
+- **Cloudinary** - Cloud image storage and management
+- **Multer** - File upload middleware
+
+### Data Processing
+- **ExcelJS** - Excel file generation
+- **csv-writer** - CSV export functionality
+
+### Utilities
+- **node-cron** - Scheduled jobs (price updates)
+- **Joi** - Data validation
+- **Morgan** - HTTP request logging
+- **Winston** - Application logging
+- **Slugify** - URL-friendly strings
+- **CORS** - Cross-origin resource sharing
+- **uuid** - Unique identifier generation
+
+---
+
+## Project Structure
+
+```
+demo/
+├── src/
+│   ├── server.ts                 # Main server entry point
+│   ├── config/
+│   │   ├── config.ts             # Environment configuration
+│   │   ├── db.config.ts          # Database configuration
+│   │   └── jwt.config.ts         # JWT configuration
+│   ├── controller/               # Route controllers
+│   │   ├── admin/                # Admin-specific controllers
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── banner.controller.ts
+│   │   │   ├── blog.controller.ts
+│   │   │   ├── category.controller.ts
+│   │   │   ├── product.controller.ts
+│   │   │   ├── productcombo.controller.ts
+│   │   │   ├── productcontent.controller.ts
+│   │   │   └── productVariant.controller.ts
+│   │   └── users/                # User-specific controllers
+│   │       ├── userauth.controller.ts
+│   │       ├── product.controller.ts
+│   │       ├── category.controller.ts
+│   │       ├── cart.controller.ts
+│   │       ├── wishlist.controller.ts
+│   │       ├── review.controller.ts
+│   │       └── ...
+│   ├── routes/                   # API route definitions
+│   │   ├── index.ts              # Main routes aggregator
+│   │   ├── admin/                # Admin API routes
+│   │   └── users/                # User API routes
+│   ├── services/                 # Business logic layer
+│   │   ├── admin/                # Admin services
+│   │   └── users/                # User services
+│   ├── models/                   # Sequelize database models
+│   │   ├── users.model.ts
+│   │   ├── product.model.ts
+│   │   ├── cart.model.ts
+│   │   ├── wishlist.model.ts
+│   │   ├── review.model.ts
+│   │   ├── banner.model.ts
+│   │   ├── blog.model.ts
+│   │   └── ...
+│   ├── middleware/               # Custom middleware
+│   │   ├── authGard.ts           # Authentication guard
+│   │   └── validation.middleware.ts
+│   ├── lib/                      # Utility libraries
+│   │   ├── app.utils.ts          # App initialization utilities
+│   │   ├── server.utils.ts       # Server setup utilities
+│   │   ├── db.utils.ts           # Database connection utilities
+│   │   ├── jwt.utils.ts          # JWT token utilities
+│   │   ├── hash.utils.ts         # Password hashing utilities
+│   │   ├── file_upload.ts        # File upload configuration
+│   │   ├── cloudinary.ts         # Cloudinary integration
+│   │   ├── sockets.server.ts     # WebSocket setup
+│   │   ├── priceUpdater.utils.ts # Scheduled price updates
+│   │   ├── logger.ts             # Winston logger setup
+│   │   ├── common.interface.ts   # Common TypeScript interfaces
+│   │   ├── constants.ts          # Application constants
+│   │   └── utils.ts              # General utility functions
+│   └── logs/                     # Application logs directory
+├── .env                          # Environment variables
+├── .gitignore                    # Git ignore rules
+├── package.json                  # Project dependencies
+├── tsconfig.json                 # TypeScript configuration
+├── allquery.sql                  # Database schema/queries
+└── README.md                     # This file
+```
+
+---
+
+## Setup Instructions
+
+### Prerequisites
+
+Before you begin, ensure you have installed:
+- **Node.js** (v14 or higher)
+- **npm** (v6 or higher) or **yarn**
+- **MySQL** (v5.7 or higher)
+- **Git**
+
+### Step 1: Clone the Repository
+
+```bash
+git clone <repository-url>
+cd demo
+```
+
+### Step 2: Install Dependencies
+
+```bash
+npm install
+```
+
+or if using yarn:
+
+```bash
+yarn install
+```
+
+### Step 3: Setup Environment Variables
+
+Create a `.env` file in the root directory and configure the following variables:
+
+```env
+# Server Configuration
+PORT=5000
+NODE_ENV=development
+
+# Database Configuration
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+DATABASE_USER_NAME=root
+DATABASE_PASSWORD=your_password
+DATABASE=ecommerce
+
+# Authentication
+JWT_SECRET=your_jwt_secret_key_here
+
+# Cloudinary (for image management)
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+# Debugging
+DEBUG=true
+```
+
+### Step 4: Setup MySQL Database
+
+1. Create a new MySQL database:
+```sql
+CREATE DATABASE ecommerce;
+```
+
+2. Run the database schema from `allquery.sql`:
+```bash
+mysql -u root -p ecommerce < allquery.sql
+```
+
+### Step 5: Configure Cloudinary (Optional)
+
+If you want to use image uploads:
+1. Sign up at [Cloudinary](https://cloudinary.com/)
+2. Get your API credentials from the dashboard
+3. Add them to the `.env` file
+
+---
+
+## Configuration
+
+### Database Configuration (`src/config/db.config.ts`)
+Configure your MySQL database connection settings.
+
+### JWT Configuration (`src/config/jwt.config.ts`)
+Set up JWT token expiration and signing options.
+
+### Server Configuration (`src/config/config.ts`)
+Define server port, environment, and other global settings.
+
+---
+
+## Running the Project
+
+### Development Mode
+
+Run the application in development mode with hot-reload:
+
+```bash
+npm run dev
+```
+
+The server will start on `http://localhost:5000` (or your configured PORT)
+
+### Build for Production
+
+Compile TypeScript to JavaScript:
+
+```bash
+npm run build
+```
+
+This generates compiled files in the `dist/` directory.
+
+### Production Mode
+
+Start the built application:
+
+```bash
+npm start
+```
+
+---
+
+## API Features
+
+### Authentication Routes
+- `POST /auth/register` - User registration
+- `POST /auth/login` - User login
+- `POST /auth/logout` - User logout
+
+### Product Routes
+- `GET /products` - Get all products
+- `GET /products/:id` - Get product details
+- `POST /admin/products` - Create product (admin)
+- `PUT /admin/products/:id` - Update product (admin)
+- `DELETE /admin/products/:id` - Delete product (admin)
+
+### Shopping Features
+- `GET /cart` - Get shopping cart
+- `POST /cart/add` - Add item to cart
+- `DELETE /cart/remove` - Remove item from cart
+- `GET /wishlist` - Get user wishlist
+- `POST /wishlist/add` - Add product to wishlist
+- `POST /reviews` - Add product review
+
+### Admin Routes
+- `GET /admin/products` - List all products
+- `POST /admin/banners` - Create banner
+- `POST /admin/categories` - Create category
+- `POST /admin/blogs` - Create blog post
+
+### User Routes
+- `GET /users/profile` - Get user profile
+- `PUT /users/profile` - Update user profile
+- `GET /users/addresses` - Get user addresses
+- `POST /users/addresses` - Add new address
+
+---
+
+## Database Schema
+
+The application uses the following main entities:
+
+- **Users** - User accounts and authentication
+- **Products** - Product catalog with variants and combos
+- **Categories** - Product categorization
+- **Cart** - Shopping cart items
+- **Wishlist** - User wishlists
+- **Reviews** - Product reviews and ratings
+- **Banners** - Homepage and promotional banners
+- **Blogs** - Blog posts and content
+- **Orders** - Order management (if configured)
+- **Addresses** - User delivery addresses
+- **OTPs** - One-time passwords for authentication
+
+Run `allquery.sql` to set up the complete schema.
+
+---
+
+## Features in Detail
+
+### Real-time Updates
+WebSocket integration via Socket.io provides real-time notifications for:
+- Order status updates
+- Product price changes
+- Inventory updates
+- Chat/messaging (if enabled)
+
+### Scheduled Jobs
+- **Price Updater**: Automatically updates product prices at scheduled intervals using node-cron
+
+### Image Management
+- Images are uploaded to Cloudinary
+- Supports multiple image formats
+- Automatic image optimization
+
+### Security Features
+- JWT-based authentication
+- Password encryption with bcryptjs
+- CORS protection
+- Request validation with Joi middleware
+- Role-based access control (Admin/User)
+
+### Logging
+- Application logs stored in the `logs/` directory
+- Winston logger for structured logging
+- Morgan HTTP request logging
+
+---
+
+## Troubleshooting
+
+### Database Connection Issues
+- Verify MySQL is running: `mysql -u root -p`
+- Check database credentials in `.env`
+- Ensure the `ecommerce` database exists
+
+### Port Already in Use
+- Change the PORT in `.env` to an available port
+- Or kill the process using the port
+
+
+### JWT Token Errors
+- Ensure JWT_SECRET is set in `.env`
+- Check token expiration time in `jwt.config.ts`
+
+---
+
+## Support & Contact
+
+For issues, questions, or contributions, please reach out to the development team.
+
+---
+
+## License
+
+MIT
