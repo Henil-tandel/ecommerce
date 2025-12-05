@@ -224,7 +224,6 @@ The application uses the following main entities:
 - **Reviews** - Product reviews and ratings
 - **Banners** - Homepage and promotional banners
 - **Blogs** - Blog posts and content
-- **Orders** - Order management (if configured)
 - **Addresses** - User delivery addresses
 - **OTPs** - One-time passwords for authentication
 
